@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>69156</id>
+      <name>Bounding coma</name>
+      <size>102</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2021-04-19 16:06:45.088735+01:00</created>
+      <updated>2021-04-19 16:52:20.716883+01:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>101</stop_frame>
+      <frame_filter></frame_filter>
+      <labels>
+        <label>
+          <name>Comma</name>
+          <color>#297f93</color>
+          <attributes>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>103625</id>
+          <start>0</start>
+          <stop>101</stop>
+          <url>http://cvat.org/?id=103625</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>borisfox</username>
+        <email>demkov.boris@gmail.com</email>
+      </owner>
+      <assignee></assignee>
+    </task>
+    <dumped>2021-04-19 16:53:03.477989+01:00</dumped>
+  </meta>
+  <image id="101" name="comet_detection_99.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="117.46" ytl="68.25" xbr="159.52" ybr="100.00" z_order="0">
+    </box>
+  </image>
+  <image id="100" name="comet_detection_98.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="149.21" ytl="236.51" xbr="160.32" ybr="248.41" z_order="0">
+    </box>
+  </image>
+  <image id="99" name="comet_detection_97.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="146.03" ytl="184.92" xbr="157.14" ybr="196.03" z_order="0">
+    </box>
+  </image>
+  <image id="98" name="comet_detection_96.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="335.63" ytl="422.94" xbr="375.40" ybr="452.38" z_order="0">
+    </box>
+  </image>
+  <image id="97" name="comet_detection_95.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="235.98" ytl="389.84" xbr="240.57" ybr="392.52" z_order="0">
+    </box>
+  </image>
+  <image id="96" name="comet_detection_94.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="309.95" ytl="98.51" xbr="350.34" ybr="147.47" z_order="0">
+    </box>
+  </image>
+  <image id="95" name="comet_detection_93.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="207.75" ytl="263.13" xbr="216.93" ybr="271.70" z_order="0">
+    </box>
+  </image>
+  <image id="94" name="comet_detection_92.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="309.06" ytl="200.79" xbr="343.90" ybr="251.34" z_order="0">
+    </box>
+  </image>
+  <image id="93" name="comet_detection_91.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="311.79" ytl="157.76" xbr="343.21" ybr="194.65" z_order="0">
+    </box>
+  </image>
+  <image id="92" name="comet_detection_90.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="179.96" ytl="248.61" xbr="194.30" ybr="265.00" z_order="0">
+    </box>
+  </image>
+  <image id="91" name="comet_detection_9.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="295.40" ytl="236.31" xbr="314.52" ybr="245.19" z_order="0">
+    </box>
+  </image>
+  <image id="90" name="comet_detection_89.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="138.29" ytl="312.81" xbr="179.28" ybr="354.48" z_order="0">
+    </box>
+  </image>
+  <image id="89" name="comet_detection_88.jpg" width="500" height="500">
+  </image>
+  <image id="88" name="comet_detection_87.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="162.88" ytl="176.89" xbr="178.59" ybr="197.38" z_order="0">
+    </box>
+  </image>
+  <image id="87" name="comet_detection_86.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="341.84" ytl="423.47" xbr="371.90" ybr="450.11" z_order="0">
+    </box>
+  </image>
+  <image id="86" name="comet_detection_85.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="322.72" ytl="401.61" xbr="335.01" ybr="413.91" z_order="0">
+    </box>
+  </image>
+  <image id="85" name="comet_detection_84.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="266.02" ytl="291.64" xbr="281.73" ybr="312.81" z_order="0">
+    </box>
+  </image>
+  <image id="84" name="comet_detection_83.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="421.08" ytl="455.57" xbr="443.62" ybr="476.07" z_order="0">
+    </box>
+  </image>
+  <image id="83" name="comet_detection_82.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="164.93" ytl="153.66" xbr="179.96" ybr="175.52" z_order="0">
+    </box>
+  </image>
+  <image id="82" name="comet_detection_81.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="90.48" ytl="351.07" xbr="98.68" ybr="356.53" z_order="0">
+    </box>
+  </image>
+  <image id="81" name="comet_detection_80.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="381.46" ytl="137.27" xbr="411.52" ybr="174.20" z_order="0">
+    </box>
+  </image>
+  <image id="80" name="comet_detection_8.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="192.25" ytl="206.26" xbr="201.13" ybr="215.82" z_order="0">
+    </box>
+  </image>
+  <image id="79" name="comet_detection_79.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="89.80" ytl="340.14" xbr="139.66" ybr="388.63" z_order="0">
+    </box>
+  </image>
+  <image id="78" name="comet_detection_78.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="257.80" ytl="304.62" xbr="272.17" ybr="314.20" z_order="0">
+    </box>
+  </image>
+  <image id="77" name="comet_detection_77.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="91.16" ytl="326.48" xbr="107.56" ybr="345.65" z_order="0">
+    </box>
+  </image>
+  <image id="76" name="comet_detection_76.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="118.48" ytl="260.90" xbr="143.80" ybr="284.80" z_order="0">
+    </box>
+  </image>
+  <image id="75" name="comet_detection_75.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="68.62" ytl="318.96" xbr="98.67" ybr="352.43" z_order="0">
+    </box>
+  </image>
+  <image id="74" name="comet_detection_74.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="61.79" ytl="371.56" xbr="90.48" ybr="402.98" z_order="0">
+    </box>
+  </image>
+  <image id="73" name="comet_detection_73.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="282.42" ytl="373.61" xbr="294.71" ybr="385.90" z_order="0">
+    </box>
+  </image>
+  <image id="72" name="comet_detection_72.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="51.54" ytl="128.39" xbr="78.87" ybr="170.06" z_order="0">
+    </box>
+  </image>
+  <image id="71" name="comet_detection_71.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="312.40" ytl="157.90" xbr="330.10" ybr="182.30" z_order="0">
+    </box>
+  </image>
+  <image id="70" name="comet_detection_70.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="298.32" ytl="160.32" xbr="338.71" ybr="211.73" z_order="0">
+    </box>
+  </image>
+  <image id="69" name="comet_detection_7.jpg" width="500" height="500">
+  </image>
+  <image id="68" name="comet_detection_69.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="210.20" ytl="327.39" xbr="227.30" ybr="341.47" z_order="0">
+    </box>
+  </image>
+  <image id="67" name="comet_detection_68.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="374.82" ytl="364.72" xbr="403.60" ybr="397.80" z_order="0">
+    </box>
+  </image>
+  <image id="66" name="comet_detection_67.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="157.56" ytl="271.70" xbr="166.13" ybr="282.72" z_order="0">
+    </box>
+  </image>
+  <image id="65" name="comet_detection_66.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="196.76" ytl="199.50" xbr="229.76" ybr="229.50" z_order="0">
+    </box>
+  </image>
+  <image id="64" name="comet_detection_65.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="379.11" ytl="278.43" xbr="404.20" ybr="294.35" z_order="0">
+    </box>
+  </image>
+  <image id="63" name="comet_detection_64.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="276.90" ytl="111.97" xbr="294.65" ybr="132.17" z_order="0">
+    </box>
+  </image>
+  <image id="62" name="comet_detection_63.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="105.54" ytl="287.61" xbr="116.56" ybr="296.18" z_order="0">
+    </box>
+  </image>
+  <image id="61" name="comet_detection_62.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="71.88" ytl="340.25" xbr="84.10" ybr="354.30" z_order="0">
+    </box>
+  </image>
+  <image id="60" name="comet_detection_61.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="296.49" ytl="288.23" xbr="314.24" ybr="305.97" z_order="0">
+    </box>
+  </image>
+  <image id="59" name="comet_detection_60.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="49.24" ytl="173.78" xbr="79.84" ybr="214.79" z_order="0">
+    </box>
+  </image>
+  <image id="58" name="comet_detection_6.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="7.62" ytl="227.03" xbr="66.38" ybr="302.30" z_order="0">
+    </box>
+  </image>
+  <image id="57" name="comet_detection_59.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="437.86" ytl="9.16" xbr="492.94" ybr="74.03" z_order="0">
+    </box>
+  </image>
+  <image id="56" name="comet_detection_58.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="254.26" ytl="268.64" xbr="267.72" ybr="286.39" z_order="0">
+    </box>
+  </image>
+  <image id="55" name="comet_detection_57.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="256.10" ytl="267.42" xbr="270.78" ybr="285.78" z_order="0">
+    </box>
+  </image>
+  <image id="54" name="comet_detection_56.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="309.95" ytl="190.92" xbr="324.03" ybr="204.38" z_order="0">
+    </box>
+  </image>
+  <image id="53" name="comet_detection_55.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="420.11" ytl="394.71" xbr="453.77" ybr="421.03" z_order="0">
+    </box>
+  </image>
+  <image id="52" name="comet_detection_54.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="311.18" ytl="184.81" xbr="324.03" ybr="195.81" z_order="0">
+    </box>
+  </image>
+  <image id="51" name="comet_detection_53.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="416.44" ytl="346.37" xbr="438.47" ybr="362.89" z_order="0">
+    </box>
+  </image>
+  <image id="50" name="comet_detection_52.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="418.89" ytl="344.53" xbr="439.69" ybr="363.50" z_order="0">
+    </box>
+  </image>
+  <image id="49" name="comet_detection_50.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="173.48" ytl="20.17" xbr="213.30" ybr="41.60" z_order="0">
+    </box>
+  </image>
+  <image id="48" name="comet_detection_5.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="235.29" ytl="215.40" xbr="265.28" ybr="257.01" z_order="0">
+    </box>
+  </image>
+  <image id="47" name="comet_detection_49.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="221.82" ytl="375.74" xbr="241.40" ybr="393.49" z_order="0">
+    </box>
+  </image>
+  <image id="46" name="comet_detection_48.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="228.56" ytl="284.55" xbr="238.96" ybr="291.90" z_order="0">
+    </box>
+  </image>
+  <image id="45" name="comet_detection_47.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="245.08" ytl="232.53" xbr="262.20" ybr="254.00" z_order="0">
+    </box>
+  </image>
+  <image id="44" name="comet_detection_46.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="169.80" ytl="417.97" xbr="194.90" ybr="436.33" z_order="0">
+    </box>
+  </image>
+  <image id="43" name="comet_detection_45.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="147.80" ytl="236.80" xbr="161.20" ybr="249.10" z_order="0">
+    </box>
+  </image>
+  <image id="42" name="comet_detection_44.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="437.25" ytl="222.74" xbr="453.77" ybr="241.71" z_order="0">
+    </box>
+  </image>
+  <image id="41" name="comet_detection_43.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="243.24" ytl="426.54" xbr="256.71" ybr="435.10" z_order="0">
+    </box>
+  </image>
+  <image id="40" name="comet_detection_42.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="275.68" ytl="314.54" xbr="319.74" ybr="350.65" z_order="0">
+    </box>
+  </image>
+  <image id="39" name="comet_detection_41.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="141.65" ytl="370.23" xbr="183.88" ybr="420.42" z_order="0">
+    </box>
+  </image>
+  <image id="38" name="comet_detection_40.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="143.49" ytl="387.37" xbr="157.50" ybr="406.30" z_order="0">
+    </box>
+  </image>
+  <image id="37" name="comet_detection_4.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="194.90" ytl="399.00" xbr="204.69" ybr="408.79" z_order="0">
+    </box>
+  </image>
+  <image id="36" name="comet_detection_39.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="402.36" ytl="151.10" xbr="422.60" ybr="178.70" z_order="0">
+    </box>
+  </image>
+  <image id="35" name="comet_detection_38.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="310.56" ytl="129.72" xbr="333.82" ybr="156.03" z_order="0">
+    </box>
+  </image>
+  <image id="34" name="comet_detection_37.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="284.86" ytl="422.86" xbr="292.82" ybr="431.43" z_order="0">
+    </box>
+  </image>
+  <image id="33" name="comet_detection_36.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="137.98" ytl="85.65" xbr="172.87" ybr="126.00" z_order="0">
+    </box>
+  </image>
+  <image id="32" name="comet_detection_35.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="253.00" ytl="452.24" xbr="294.04" ybr="476.11" z_order="0">
+    </box>
+  </image>
+  <image id="31" name="comet_detection_34.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="152.67" ytl="216.62" xbr="184.50" ybr="262.52" z_order="0">
+    </box>
+  </image>
+  <image id="30" name="comet_detection_33.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="245.69" ytl="444.90" xbr="253.04" ybr="451.02" z_order="0">
+    </box>
+  </image>
+  <image id="29" name="comet_detection_32.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="75.56" ytl="272.31" xbr="92.08" ybr="293.12" z_order="0">
+    </box>
+  </image>
+  <image id="28" name="comet_detection_31.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="64.54" ytl="253.34" xbr="76.78" ybr="272.31" z_order="0">
+    </box>
+  </image>
+  <image id="27" name="comet_detection_30.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="33.33" ytl="375.74" xbr="73.72" ybr="418.58" z_order="0">
+    </box>
+  </image>
+  <image id="26" name="comet_detection_3.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="260.38" ytl="310.26" xbr="277.52" ybr="333.51" z_order="0">
+    </box>
+  </image>
+  <image id="25" name="comet_detection_29.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="289.14" ytl="325.56" xbr="303.22" ybr="339.02" z_order="0">
+    </box>
+  </image>
+  <image id="24" name="comet_detection_28.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="38.84" ytl="441.22" xbr="47.40" ybr="449.79" z_order="0">
+    </box>
+  </image>
+  <image id="23" name="comet_detection_27.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="308.73" ytl="181.13" xbr="327.09" ybr="201.32" z_order="0">
+    </box>
+  </image>
+  <image id="22" name="comet_detection_26.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="63.32" ytl="360.44" xbr="93.92" ybr="405.73" z_order="0">
+    </box>
+  </image>
+  <image id="21" name="comet_detection_25.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="149.61" ytl="310.87" xbr="190.00" ybr="358.60" z_order="0">
+    </box>
+  </image>
+  <image id="20" name="comet_detection_24.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="254.87" ytl="220.91" xbr="264.05" ybr="229.47" z_order="0">
+    </box>
+  </image>
+  <image id="19" name="comet_detection_23.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="193.06" ytl="165.21" xbr="210.20" ybr="178.68" z_order="0">
+    </box>
+  </image>
+  <image id="18" name="comet_detection_22.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="251.20" ytl="203.77" xbr="288.53" ybr="242.33" z_order="0">
+    </box>
+  </image>
+  <image id="17" name="comet_detection_21.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="92.08" ytl="119.93" xbr="104.32" ybr="129.72" z_order="0">
+    </box>
+  </image>
+  <image id="16" name="comet_detection_20.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="212.03" ytl="250.28" xbr="226.11" ybr="261.91" z_order="0">
+    </box>
+  </image>
+  <image id="15" name="comet_detection_2.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="145.90" ytl="414.90" xbr="163.10" ybr="433.27" z_order="0">
+    </box>
+  </image>
+  <image id="14" name="comet_detection_19.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="254.26" ytl="454.69" xbr="284.25" ybr="470.60" z_order="0">
+    </box>
+  </image>
+  <image id="13" name="comet_detection_18.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="171.64" ytl="317.60" xbr="184.49" ybr="332.29" z_order="0">
+    </box>
+  </image>
+  <image id="12" name="comet_detection_17.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="235.29" ytl="271.09" xbr="254.87" ybr="289.45" z_order="0">
+    </box>
+  </image>
+  <image id="11" name="comet_detection_16.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="418.27" ytl="410.01" xbr="436.02" ybr="428.37" z_order="0">
+    </box>
+  </image>
+  <image id="10" name="comet_detection_15.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="258.54" ytl="460.20" xbr="287.92" ybr="476.11" z_order="0">
+    </box>
+  </image>
+  <image id="9" name="comet_detection_14.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="71.27" ytl="403.28" xbr="89.63" ybr="421.64" z_order="0">
+    </box>
+  </image>
+  <image id="8" name="comet_detection_13.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="56.58" ytl="247.22" xbr="66.38" ybr="266.19" z_order="0">
+    </box>
+  </image>
+  <image id="7" name="comet_detection_12.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="224.88" ytl="451.63" xbr="230.39" ybr="455.30" z_order="0">
+    </box>
+  </image>
+  <image id="6" name="comet_detection_11.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="35.17" ytl="440.61" xbr="44.34" ybr="450.40" z_order="0">
+    </box>
+  </image>
+  <image id="5" name="comet_detection_104.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="173.48" ytl="410.62" xbr="192.45" ybr="429.60" z_order="0">
+    </box>
+  </image>
+  <image id="4" name="comet_detection_103.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="166.13" ytl="75.86" xbr="179.60" ybr="91.78" z_order="0">
+    </box>
+  </image>
+  <image id="3" name="comet_detection_102.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="239.33" ytl="442.14" xbr="249.12" ybr="451.93" z_order="0">
+    </box>
+  </image>
+  <image id="2" name="comet_detection_101.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="189.39" ytl="129.11" xbr="197.96" ybr="137.67" z_order="0">
+    </box>
+  </image>
+  <image id="1" name="comet_detection_100.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="317.29" ytl="154.81" xbr="350.34" ybr="184.80" z_order="0">
+    </box>
+  </image>
+  <image id="0" name="comet_detection_10.jpg" width="500" height="500">
+    <box label="Comma" occluded="0" source="manual" xtl="146.95" ytl="185.51" xbr="154.30" ybr="194.08" z_order="0">
+    </box>
+  </image>
+</annotations>
