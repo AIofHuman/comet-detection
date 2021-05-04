@@ -18,7 +18,7 @@ I create function to calc ratio: avg_signal_bb/ (avg_signal_bb + avg_signal_all_
   The model is not perfect, but quite accurately detects the position of the comet in the picture. The model can be improved by increasing the training dataset or by training it on images from one camera. If you have 100-150 comet images, then you can create your own comet detection model, for your camera.
 
 # Further development and proposal for cooperation
-The model detects the position of the comet in the image, but cannot classify whether the comet is in the image or not. However, I would like to solve this problem on real astronomical data. Therefore, if you have FITS files with comments and without comets and you are ready to share them, please contact me.
+The model detects the position of the comet in the image, but cannot classify whether the comet is in the image or not. However, I would like to solve this problem on real astronomical data. Therefore, if you have FITS files with comets and without comets and you are ready to share them, please contact me.
 
 # How to use:
     to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
