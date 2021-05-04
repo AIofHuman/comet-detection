@@ -21,7 +21,7 @@ I create function to calc ratio: avg_signal_bb/ (avg_signal_bb + avg_signal_all_
 The model detects the position of the comet in the image, but cannot classify whether the comet is in the image or not. However, I would like to solve this problem on real astronomical data. Therefore, if you have FITS files with comets and without comets and you are ready to share them, please contact me.
 
 # How to use:
-    to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
+  to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
     '''
     def get_commet_detection(path_to_image, path_to_model):
       import numpy as np
