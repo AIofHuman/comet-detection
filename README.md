@@ -23,7 +23,6 @@ The model detects the position of the comet in the image, but cannot classify wh
 # How to use:
   to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
   
-    '''
     def get_commet_detection(path_to_image, path_to_model):
       import numpy as np
       import matplotlib.pyplot as plt
@@ -60,7 +59,6 @@ The model detects the position of the comet in the image, but cannot classify wh
                                      fill=False, edgecolor='red', lw=2))
 
       plt.show()  
-    '''
 
 ## Example:
 
