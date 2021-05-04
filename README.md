@@ -24,42 +24,42 @@ The model detects the position of the comet in the image, but cannot classify wh
   to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
   
   '''
-  def get_commet_detection(path_to_image, path_to_model):
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from matplotlib import patches
-    import torch
-    from torchvision.transforms import ToTensor
-    from PIL import Image
+    def get_commet_detection(path_to_image, path_to_model):
+      import numpy as np
+      import matplotlib.pyplot as plt
+      from matplotlib import patches
+      import torch
+      from torchvision.transforms import ToTensor
+      from PIL import Image
 
-    pil_img = Image.open(path_to_image).convert('RGB')
-    img_resize = pil_img.resize((500,500))
+      pil_img = Image.open(path_to_image).convert('RGB')
+      img_resize = pil_img.resize((500,500))
 
-    fig, ax = plt.subplots(figsize = (10,10))
-    ax.imshow(img_resize)
+      fig, ax = plt.subplots(figsize = (10,10))
+      ax.imshow(img_resize)
 
-    image = ToTensor()(np.array(img_resize))
-    image = image.unsqueeze(0)
+      image = ToTensor()(np.array(img_resize))
+      image = image.unsqueeze(0)
 
-    model = torch.load(path_to_model).to(device='cpu')
-    model.eval()
+      model = torch.load(path_to_model).to(device='cpu')
+      model.eval()
 
-    predictions = net.to(device='cpu')(image)
+      predictions = net.to(device='cpu')(image)
 
-    with torch.no_grad():
-        x1_y1 = predictions[:, :2]
-        x2_y2 = predictions[:, 2:4]
+      with torch.no_grad():
+          x1_y1 = predictions[:, :2]
+          x2_y2 = predictions[:, 2:4]
 
-        w = abs(x1_y1[0][0] - x2_y2[0][0]) * img_resize.size[0]
-        h = abs(x1_y1[0][1] - x2_y2[0][1]) * img_resize.size[1]
-        x = min(x1_y1[0][0],x2_y2[0][0]) * img_resize.size[0]
-        y = min(x1_y1[0][1],x2_y2[0][1]) * img_resize.size[1]
-        print(x,y,w,h)
+          w = abs(x1_y1[0][0] - x2_y2[0][0]) * img_resize.size[0]
+          h = abs(x1_y1[0][1] - x2_y2[0][1]) * img_resize.size[1]
+          x = min(x1_y1[0][0],x2_y2[0][0]) * img_resize.size[0]
+          y = min(x1_y1[0][1],x2_y2[0][1]) * img_resize.size[1]
+          print(x,y,w,h)
 
-    ax.add_patch(patches.Rectangle((x,y),w,h,
-                                   fill=False, edgecolor='red', lw=2))
+      ax.add_patch(patches.Rectangle((x,y),w,h,
+                                     fill=False, edgecolor='red', lw=2))
 
-    plt.show()  
+      plt.show()  
   '''
 
 ## Example:
