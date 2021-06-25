@@ -31,7 +31,7 @@ The model detects the position of the comet in the image, but cannot classify wh
     from matplotlib import patches
     from torchvision.transforms import ToTensor
 
-    def get_commet_detection(path_to_image, path_to_model):
+    def get_commet_detection(path_to_image, path_to_model, net):
       pil_img = Image.open(path_to_image).convert('RGB')
       img_resize = pil_img.resize((500,500))
 
@@ -45,7 +45,7 @@ The model detects the position of the comet in the image, but cannot classify wh
       model = torch.load(path_to_model).to(device=device)
       model.eval()
 
-      predictions = net.to(device='cpu')(image)
+      predictions = net.to(device=device)(image)
 
       with torch.no_grad():
           x1_y1 = predictions[:, :2]
