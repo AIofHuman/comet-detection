@@ -23,14 +23,15 @@ The model detects the position of the comet in the image, but cannot classify wh
 # How to use:
   to detect a comet on your astro image, you will need a file with a trained model (comet_detection_efficient_net) and the function:
   
-    def get_commet_detection(path_to_image, path_to_model):
-      import numpy as np
-      import matplotlib.pyplot as plt
-      from matplotlib import patches
-      import torch
-      from torchvision.transforms import ToTensor
-      from PIL import Image
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import torch
+    
+    from PIL import Image
+    from matplotlib import patches
+    from torchvision.transforms import ToTensor
 
+    def get_commet_detection(path_to_image, path_to_model):
       pil_img = Image.open(path_to_image).convert('RGB')
       img_resize = pil_img.resize((500,500))
 
@@ -39,8 +40,9 @@ The model detects the position of the comet in the image, but cannot classify wh
 
       image = ToTensor()(np.array(img_resize))
       image = image.unsqueeze(0)
-
-      model = torch.load(path_to_model).to(device='cpu')
+      
+      device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+      model = torch.load(path_to_model).to(device=device)
       model.eval()
 
       predictions = net.to(device='cpu')(image)
