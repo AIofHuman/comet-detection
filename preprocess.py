@@ -22,11 +22,6 @@ def analyse_images(path_to_images):
     df = df.astype({"channel": int,"weigth": int, "heigth": int})
     return df
 
-# looks for orignal images
-path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
-df = analyse_images(path_to_images)
-df[(df.weigth < 200) | (df.heigth < 200)]
-
 def rename_images(path_to_images, index):
     image_files = [f for f in listdir(path_to_images) if isfile(join(path_to_images, f))]
     for file in tqdm(image_files,total=len(image_files)):
@@ -59,8 +54,16 @@ def image_pred_proccesing(path_to_images,path_to_preproc_images,ext='jpg'):
         file, _ = os.path.splitext(file)
         img_resize.save(f'{path_to_preproc_images}{file}.{ext}')
 
-path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
-path_to_preproc_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\resize_images\\'
-rename_images(path_to_images, index = 200)
-image_pred_proccesing(path_to_images,path_to_preproc_images)
+def analyse():
+    path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
+    df = analyse_images(path_to_images)
+    df[(df.weigth < 200) | (df.heigth < 200)]
 
+def main():
+    path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
+    path_to_preproc_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\resize_images\\'
+    rename_images(path_to_images, index = 200)
+    image_pred_proccesing(path_to_images,path_to_preproc_images)
+
+if __name__ == "__main__":
+    main()
