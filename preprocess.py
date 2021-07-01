@@ -1,11 +1,12 @@
 import os
-from PIL import Image
 import numpy as np
 import pandas as pd
-from os.path import isfile, join
-from os import listdir
 import matplotlib.pyplot as plt
+
+from os import listdir
+from os.path import isfile, join
 from tqdm import tqdm
+from PIL import Image
 
 def analyse_images(path_to_images):
     image_files = [f for f in listdir(path_to_images) if isfile(join(path_to_images, f))]
