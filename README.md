@@ -13,8 +13,8 @@ I create function to calc ratio: avg_signal_bb/ (avg_signal_bb + avg_signal_all_
 6. The final training of the neural network took 2.5 hours on my NVideo GTX 2060 video card.
 
 # Recap:
-<img src="./image_results/results_1.png" height="400">
-<img src="./image_results/results_2.png" height="400">
+<img src="./data/image_results/results_1.png" height="400">
+<img src="./data/image_results/results_2.png" height="400">
   The model is not perfect, but quite accurately detects the position of the comet in the picture. The model can be improved by increasing the training dataset or by training it on images from one camera. If you have 100-150 comet images, then you can create your own comet detection model, for your camera.
 
 # Further development and proposal for cooperation
@@ -64,4 +64,4 @@ The model detects the position of the comet in the image, but cannot classify wh
 
 ## Example:
 
-<img src="./image_results/results_3.png" height="400">
+<img src="./data/image_results/results_3.png" height="400">
