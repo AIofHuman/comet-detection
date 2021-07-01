@@ -56,13 +56,13 @@ def image_pred_proccesing(path_to_images,path_to_preproc_images,ext='jpg'):
         img_resize.save(f'{path_to_preproc_images}{file}.{ext}')
 
 def analyse():
-    path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
+    path_to_images = 'path/to/images'
     df = analyse_images(path_to_images)
     df[(df.weigth < 200) | (df.heigth < 200)]
 
 def main():
-    path_to_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\images2\\'
-    path_to_preproc_images = 'C:\\Users\\demko_r\\ML\\Electiv_CV\\resize_images\\'
+    path_to_images = 'path/to/images'
+    path_to_preproc_images = 'path/to/resized/images'
     rename_images(path_to_images, index = 200)
     image_pred_proccesing(path_to_images,path_to_preproc_images)
 
