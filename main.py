@@ -14,7 +14,6 @@ from IPython.display import clear_output
 import albumentations as A
 import cv2
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import patches
@@ -288,18 +287,14 @@ aug_transform_4 = A.Compose([
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
 
 
-
-
 train = СometDetectionDataset(xml_file='annotations2.xml', img_dir='./resize_images/',
                               train=True, augmentation_transform = [aug_transform_1,aug_transform_2,aug_transform_3,aug_transform_4])
 test = СometDetectionDataset(xml_file = 'annotations2.xml', img_dir='./resize_images/', train=False)
 print(f'Train size {len(train)}, test size {len(test)}')
 
 
-
 train_loader = DataLoader(train, batch_size=4, drop_last=True )
 test_loader = DataLoader(test, batch_size=2, drop_last=True)
-
 
 
 # check if all images and bounding in place
@@ -340,7 +335,7 @@ def train_model(net, model_name):
             optimizer.zero_grad()
             predictions = net(images)
 
-            loss = (loss_MAE(predictions[:, :2], x1_y1) +                 loss_MAE(predictions[:, 2:4], x2_y2) +                 2*loss_MSE(predictions[:, 4:5], ratio))
+            loss = (loss_MAE(predictions[:, :2], x1_y1) + loss_MAE(predictions[:, 2:4], x2_y2) + 2*loss_MSE(predictions[:, 4:5], ratio))
             loss.backward()
             optimizer.step()
 
@@ -377,16 +372,13 @@ def train_model(net, model_name):
 
         # calc loss
         with torch.no_grad():
-            loss = (loss_MAE(x1_y1_pred, x1_y1) +                 loss_MAE(x2_y2_pred, x2_y2) +                 2*loss_MSE(ratio_pred, ratio))
+            loss = (loss_MAE(x1_y1_pred, x1_y1) + loss_MAE(x2_y2_pred, x2_y2) + 2*loss_MSE(ratio_pred, ratio))
 
         epoch_loss += loss.item()
         # show detect bounding box
         show_list_images(batch['image'], x1_y1_pred, x2_y2_pred, ratio_pred, files_name)
 
     print(f'Test: loss function {epoch_loss / len(test_loader)}')
-
-
-# In[62]:
 
 
 df = pd.DataFrame(columns=['model','n_epoch','loss'])
@@ -407,9 +399,6 @@ device
 
 # ## 2.2 Efficient net
 
-# In[63]:
-
-
 get_ipython().run_cell_magic('time', '', "from efficientnet_pytorch import EfficientNet\nnet = EfficientNet.from_pretrained('efficientnet-b0')\nnet._fc = torch.nn.Linear(in_features=1280, out_features=5, bias=True)\n\ntrain_model(net, 'efficient_net')")
 
 
@@ -420,7 +409,6 @@ get_commet_detection('./PanstarssN3319Falesiedi.jpg', './comet_detection_efficie
 
 # ## Resnet VS efficient_net
 
-import matplotlib.pyplot as plt
 
 def plot_training_curves(training, title):
     fig, ax = plt.subplots(figsize = (10,10))
