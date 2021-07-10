@@ -18,6 +18,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import patches
 
+from torchvision.transforms import ToTensor
+from PIL import Image
+
+import xml.etree.ElementTree as ET
+from sklearn.model_selection import train_test_split
+from warnings import simplefilter
+
+
 def print_image(sample):
     """
         Print one sample of СometDetectionDataset class.
@@ -101,12 +109,6 @@ def get_commet_detection(path_to_image, path_to_model):
     Returns:
         Plot image and bounding box.
     """
-    import numpy as np
-    import matplotlib.pyplot as plt
-    from matplotlib import patches
-    import torch
-    from torchvision.transforms import ToTensor
-    from PIL import Image
 
     pil_img = Image.open(path_to_image).convert('RGB')
     img_resize = pil_img.resize((500,500))
@@ -167,9 +169,6 @@ class СometDetectionDataset(Dataset):
         """
             Parse xml file with coordinates of bounding box
         """
-        import xml.etree.ElementTree as ET
-        import pandas as pd
-        from sklearn.model_selection import train_test_split
 
         df = pd.DataFrame(columns=['file_name','x1','y1','x2','y2','label'])
         tree = ET.parse(xml_file)
@@ -304,7 +303,6 @@ show_images_batch(next(iter(train_loader)))
 # # 2. Train model
 def train_model(net, model_name):
     # import warnings filter
-    from warnings import simplefilter
     # ignore all future warnings
     simplefilter(action='ignore', category=FutureWarning)
 
