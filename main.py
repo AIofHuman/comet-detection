@@ -286,25 +286,19 @@ aug_transform_4 = A.Compose([
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
 
 
-train = СometDetectionDataset(xml_file='annotations2.xml', img_dir='./resize_images/',
-                              train=True, augmentation_transform = [aug_transform_1,aug_transform_2,aug_transform_3,aug_transform_4])
-test = СometDetectionDataset(xml_file = 'annotations2.xml', img_dir='./resize_images/', train=False)
-print(f'Train size {len(train)}, test size {len(test)}')
 
 
-train_loader = DataLoader(train, batch_size=4, drop_last=True )
-test_loader = DataLoader(test, batch_size=2, drop_last=True)
 
 
-# check if all images and bounding in place
-show_images_batch(next(iter(train_loader)))
-
-
-# # 2. Train model
 def train_model(net, model_name, device):
-    # import warnings filter
-    # ignore all future warnings
     simplefilter(action='ignore', category=FutureWarning)
+
+    train = СometDetectionDataset(xml_file='annotations2.xml', img_dir='./resize_images/',
+                              train=True, augmentation_transform = [aug_transform_1,aug_transform_2,aug_transform_3,aug_transform_4])
+    test = СometDetectionDataset(xml_file = 'annotations2.xml', img_dir='./resize_images/', train=False)
+
+    train_loader = DataLoader(train, batch_size=4, drop_last=True )
+    test_loader = DataLoader(test, batch_size=2, drop_last=True)
 
     loss_MSE = torch.nn.MSELoss()
     loss_MAE = torch.nn.L1Loss()
@@ -378,9 +372,6 @@ def train_model(net, model_name, device):
 
     print(f'Test: loss function {epoch_loss / len(test_loader)}')
 
-# ## 2.2 Efficient net
-
-get_ipython().run_cell_magic('time', '', "from efficientnet_pytorch import EfficientNet\nnet = EfficientNet.from_pretrained('efficientnet-b0')\nnet._fc = torch.nn.Linear(in_features=1280, out_features=5, bias=True)\n\ntrain_model(net, 'efficient_net')")
 
 def plot_training_curves(training, title):
     fig, ax = plt.subplots(figsize = (10,10))
@@ -390,9 +381,6 @@ def plot_training_curves(training, title):
     ax.set_ylabel('loss')
     ax.set_xlabel('epoch')
     plt.show()
-
-df.to_csv('loss_history.csv',index=False)
-plot_training_curves(df[df.model=='efficient_net'],title='efficient_net')
 
 
 def main():
