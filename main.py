@@ -33,6 +33,7 @@ def print_image(sample):
     Returns:
         Plot of sample with bounding box.
     """
+
     fig, ax = plt.subplots(figsize = (9,9))
 
     image = np.moveaxis(sample['image'].numpy(), 0, 2)
@@ -48,9 +49,9 @@ def print_image(sample):
     x = min(x1_y1[0],x2_y2[0]) * image.shape[0]
     y = min(x1_y1[1],x2_y2[1]) * image.shape[1]
 
-    ax.add_patch(patches.Rectangle((x,y),w,h,
-                                   fill=False, edgecolor='red', lw=2))
+    ax.add_patch(patches.Rectangle((x, y), w, h, fill=False, edgecolor='red', lw=2))
     plt.show()
+
 
 def show_images_batch(batch):
     """
@@ -61,6 +62,7 @@ def show_images_batch(batch):
     Returns:
         Plot of samples with bounding boxes.
     """
+
     img_list = batch['image']
     x1_y1_list = batch['x1_y1']
     x2_y2_list = batch['x2_y2']
@@ -72,10 +74,12 @@ def show_images_batch(batch):
 
     show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name)
 
+
 def show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name):
     """
         Utility function for ploting image with bounding box
     """
+
     fig = plt.figure(figsize = (20,20))
     for i in range(len(img_list)):
         ax = fig.add_subplot(4, 4, i+1)
@@ -89,13 +93,13 @@ def show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name):
         x = min(x1_y1[0],x2_y2[0]) * image.shape[0]
         y = min(x1_y1[1],x2_y2[1]) * image.shape[1]
 
-        ax.add_patch(patches.Rectangle((x,y),w,h,
-                     fill=False, edgecolor='red', lw=2))
+        ax.add_patch(patches.Rectangle((x,y), w, h, fill=False, edgecolor='red', lw=2))
         file_path, file_name = os.path.split(files_name[i])
 
         ax.set_title('File {0} ratio {1:.5f}'.format(file_name,ratio_str))
 
     plt.show()
+
 
 def get_commet_detection(path_to_image, path_to_model):
     """
@@ -131,10 +135,7 @@ def get_commet_detection(path_to_image, path_to_model):
         x = min(x1_y1[0][0],x2_y2[0][0]) * img_resize.size[0]
         y = min(x1_y1[0][1],x2_y2[0][1]) * img_resize.size[1]
 
-
-    ax.add_patch(patches.Rectangle((x,y),w,h,
-                                   fill=False, edgecolor='red', lw=2))
-
+    ax.add_patch(patches.Rectangle((x,y), w, h, fill=False, edgecolor='red', lw=2))
     plt.show()
 
 
@@ -379,8 +380,6 @@ def train_model(net, model_name):
 
 df = pd.DataFrame(columns=['model','n_epoch','loss'])
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device
-
 
 # ## 2.1 Resnet18
 
@@ -396,12 +395,6 @@ device
 # ## 2.2 Efficient net
 
 get_ipython().run_cell_magic('time', '', "from efficientnet_pytorch import EfficientNet\nnet = EfficientNet.from_pretrained('efficientnet-b0')\nnet._fc = torch.nn.Linear(in_features=1280, out_features=5, bias=True)\n\ntrain_model(net, 'efficient_net')")
-
-
-get_commet_detection('./S3-Panstarrs-July-15-Michael-Jaeger-STv1.jpg', './comet_detection_efficient_net')
-
-get_commet_detection('./PanstarssN3319Falesiedi.jpg', './comet_detection_efficient_net')
-
 
 # ## Resnet VS efficient_net
 
