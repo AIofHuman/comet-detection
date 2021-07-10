@@ -22,6 +22,7 @@ from torchvision.io.image import read_image
 from IPython.display import clear_output
 from sklearn.model_selection import train_test_split
 from warnings import simplefilter
+from torchvision.models import resnet18
 
 
 def print_image(sample):
@@ -300,7 +301,7 @@ show_images_batch(next(iter(train_loader)))
 
 
 # # 2. Train model
-def train_model(net, model_name):
+def train_model(net, model_name, device):
     # import warnings filter
     # ignore all future warnings
     simplefilter(action='ignore', category=FutureWarning)
@@ -377,27 +378,9 @@ def train_model(net, model_name):
 
     print(f'Test: loss function {epoch_loss / len(test_loader)}')
 
-
-df = pd.DataFrame(columns=['model','n_epoch','loss'])
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
-
-# ## 2.1 Resnet18
-
-# %%time
-# from torchvision.models import resnet18
-# net = resnet18(pretrained=True)
-# net.fc = torch.nn.Linear(in_features=512, out_features=5, bias=True)
-#
-# train_model(net, 'resnet_18')
-
-# get_commet_detection('./S3-Panstarrs-July-15-Michael-Jaeger-STv1.jpg', './comet_detection_resnet_18')
-
 # ## 2.2 Efficient net
 
 get_ipython().run_cell_magic('time', '', "from efficientnet_pytorch import EfficientNet\nnet = EfficientNet.from_pretrained('efficientnet-b0')\nnet._fc = torch.nn.Linear(in_features=1280, out_features=5, bias=True)\n\ntrain_model(net, 'efficient_net')")
-
-# ## Resnet VS efficient_net
-
 
 def plot_training_curves(training, title):
     fig, ax = plt.subplots(figsize = (10,10))
@@ -407,7 +390,18 @@ def plot_training_curves(training, title):
     ax.set_ylabel('loss')
     ax.set_xlabel('epoch')
     plt.show()
+
 df.to_csv('loss_history.csv',index=False)
-
-
 plot_training_curves(df[df.model=='efficient_net'],title='efficient_net')
+
+
+def main():
+    net = resnet18(pretrained=True)
+    net.fc = torch.nn.Linear(in_features=512, out_features=5, bias=True)
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    train_model(net, 'resnet_18', device)
+    #get_commet_detection('data/comet_images/S3-Panstarrs-July-15-Michael-Jaeger-STv1.jpg', 'weights/comet_detection_resnet_18')
+
+
+if __name__ == "__main__":
+    main()
