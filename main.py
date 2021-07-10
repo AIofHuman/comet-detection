@@ -262,36 +262,37 @@ class СometDetectionDataset(Dataset):
         return result
 
 
-aug_transform_1 = A.Compose([
+def augmentations():
+    aug_transform_1 = A.Compose([
                            A.RandomSizedBBoxSafeCrop(width=500, height=500),
                            A.HorizontalFlip(p=0.5),
                            A.RandomBrightnessContrast(p=0.2),
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
 
-aug_transform_2 = A.Compose([
+    aug_transform_2 = A.Compose([
                            A.RandomSizedBBoxSafeCrop(width=500, height=500),
                            A.VerticalFlip(p=0.5),
                            A.RandomBrightnessContrast(p=0.5),
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
 
-aug_transform_3 = A.Compose([
+    aug_transform_3 = A.Compose([
                            A.RandomSizedBBoxSafeCrop(width=500, height=500),
                            A.VerticalFlip(p=0.5), A.HorizontalFlip(p=0.5),
                            A.RandomBrightnessContrast(p=0.7),
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
-aug_transform_4 = A.Compose([
+    aug_transform_4 = A.Compose([
                            A.RandomSizedBBoxSafeCrop(width=500, height=500),
                            A.VerticalFlip(p=0.25), A.HorizontalFlip(p=0.25),
                            A.RandomBrightnessContrast(p=0.3),
                          ], bbox_params=A.BboxParams(format='pascal_voc'))
 
-
-
-
+    return aug_transform_1, aug_transform_2, aug_transform_3, aug_transform_4
 
 
 def train_model(net, model_name, device):
     simplefilter(action='ignore', category=FutureWarning)
+
+    aug_transform_1, aug_transform_2, aug_transform_3, aug_transform_4 = augmentations()
 
     train = СometDetectionDataset(xml_file='annotations2.xml', img_dir='./resize_images/',
                               train=True, augmentation_transform = [aug_transform_1,aug_transform_2,aug_transform_3,aug_transform_4])
