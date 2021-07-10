@@ -1,27 +1,25 @@
 import os
-from os import listdir
-from os.path import isfile, join
 import shutil
+import cv2
+import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+
 import torch
 import torchvision
 import torchvision.transforms as transforms
-from torch.utils.data import Dataset, DataLoader
-from torchvision.io.image import read_image
-from tqdm import tqdm
-from IPython.display import clear_output
-
 import albumentations as A
-import cv2
-
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib import patches
-
-from torchvision.transforms import ToTensor
-from PIL import Image
-
 import xml.etree.ElementTree as ET
+
+from os import listdir
+from os.path import isfile, join
+from PIL import Image
+from tqdm import tqdm
+from matplotlib import patches
+from torch.utils.data import Dataset, DataLoader
+from torchvision.transforms import ToTensor
+from torchvision.io.image import read_image
+from IPython.display import clear_output
 from sklearn.model_selection import train_test_split
 from warnings import simplefilter
 
