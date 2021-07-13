@@ -102,7 +102,7 @@ def show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name):
     plt.show()
 
 
-def get_commet_detection(path_to_image, path_to_model):
+def make_comet_predict(path_to_image, path_to_model):
     """
         Predict bounding box for comet in astro image.
 
@@ -133,15 +133,14 @@ def get_commet_detection(path_to_image, path_to_model):
 
         w = abs(x1_y1[0][0] - x2_y2[0][0]) * img_resize.size[0]
         h = abs(x1_y1[0][1] - x2_y2[0][1]) * img_resize.size[1]
-        x = min(x1_y1[0][0],x2_y2[0][0]) * img_resize.size[0]
-        y = min(x1_y1[0][1],x2_y2[0][1]) * img_resize.size[1]
+        x = min(x1_y1[0][0], x2_y2[0][0]) * img_resize.size[0]
+        y = min(x1_y1[0][1], x2_y2[0][1]) * img_resize.size[1]
 
     ax.add_patch(patches.Rectangle((x,y), w, h, fill=False, edgecolor='red', lw=2))
     plt.show()
 
 
 class СometDetectionDataset(Dataset):
-
     def __init__(self, xml_file, img_dir,
                  shuffle=False, train=None,
                  test_size=0.05, transform=None, augmentation_transform=None):
@@ -389,7 +388,7 @@ def main():
     net.fc = torch.nn.Linear(in_features=512, out_features=5, bias=True)
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
     train_model(net, 'resnet_18', device)
-    #get_commet_detection('data/comet_images/S3-Panstarrs-July-15-Michael-Jaeger-STv1.jpg', 'weights/comet_detection_resnet_18')
+    #make_comet_predict('data/comet_images/S3-Panstarrs-July-15-Michael-Jaeger-STv1.jpg', 'weights/comet_detection_resnet_18')
 
 
 if __name__ == "__main__":
