@@ -9,7 +9,7 @@ def print_image(sample):
     For example:  print_image(train[2])
 
     Args:
-        sample (object): item of СometDetectionDataset class.
+        sample (image): item of СometDetectionDataset class.
 
     Returns:
         Plot sample with bounding box.
@@ -40,7 +40,7 @@ def show_images_batch(batch):
     For example:  show_images_batch(next(iter(train_loader)))
 
     Args:
-        batch (objects): item of DataLoader based on СometDetectionDataset class.
+        batch (images): item of DataLoader based on СometDetectionDataset class.
 
     Returns:
         Plot samples with bounding boxes.
