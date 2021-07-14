@@ -26,12 +26,12 @@ from torchvision.models import resnet18
 
 
 def make_comet_predict(path_to_image, path_to_model):
-    """
-        Predict bounding box for comet in astro image.
+    """ Predict bounding box for comet in astro image.
 
     Args:
-        path_to_image: path to astro image with comet
-        path_to_model: path to pre-trained model
+        path_to_image (image): path to astro image with comet
+        path_to_model (image): path to pre-trained model
+
     Returns:
         Plot image and bounding box.
     """
@@ -73,8 +73,7 @@ class СometDetectionDataset(Dataset):
         self.data = self._get_dataset_from_xml_cvat_file(xml_file,shuffle,train,test_size)
 
     def _get_ratio_means_image_bbox(self, image, x1, y1, x2, y2):
-        """
-            Calc ratio between average signal in bounding box and avg signal whole image
+        """ Calc ratio between average signal in bounding box and avg signal whole image.
         """
         x_min = min(int(x1),int(x2))
         y_min = min(int(y1),int(y2))
@@ -88,8 +87,7 @@ class СometDetectionDataset(Dataset):
         return mean_bounding_box / (mean_all_image + mean_bounding_box)
 
     def _get_dataset_from_xml_cvat_file(self,xml_file, shuffle, train, test_size):
-        """
-            Parse xml file with coordinates of bounding box
+        """ Parse xml file with coordinates of bounding box.
         """
 
         df = pd.DataFrame(columns=['file_name','x1','y1','x2','y2','label'])
