@@ -4,13 +4,15 @@ import matplotlib.pyplot as plt
 
 
 def print_image(sample):
-    """
-        Print one sample of СometDetectionDataset class.
-        For example:  print_image(train[2])
+    """ Print one sample of СometDetectionDataset class.
+
+    For example:  print_image(train[2])
+
     Args:
-        sample: item of СometDetectionDataset class.
+        sample (object): item of СometDetectionDataset class.
+
     Returns:
-        Plot of sample with bounding box.
+        Plot sample with bounding box.
     """
 
     fig, ax = plt.subplots(figsize = (9,9))
@@ -33,13 +35,15 @@ def print_image(sample):
 
 
 def show_images_batch(batch):
-    """
-        Print one batch of samples.
-        For example:  show_images_batch(next(iter(train_loader)))
+    """ Print one batch of samples.
+
+    For example:  show_images_batch(next(iter(train_loader)))
+
     Args:
-        batch: item of DataLoader based on СometDetectionDataset class.
+        batch (objects): item of DataLoader based on СometDetectionDataset class.
+
     Returns:
-        Plot of samples with bounding boxes.
+        Plot samples with bounding boxes.
     """
 
     img_list = batch['image']
@@ -55,8 +59,7 @@ def show_images_batch(batch):
 
 
 def show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name):
-    """
-        Utility function for ploting image with bounding box
+    """ Utility function for ploting image with bounding box
     """
 
     fig = plt.figure(figsize = (20,20))
@@ -81,6 +84,9 @@ def show_list_images(img_list, x1_y1_list, x2_y2_list, ratio, files_name):
 
 
 def plot_training_curves(training, title):
+    """ Plot curves of training process
+    """
+
     fig, ax = plt.subplots(figsize = (10,10))
     ax.plot(training['n_epoch'],training['loss'])
     ax.grid()
